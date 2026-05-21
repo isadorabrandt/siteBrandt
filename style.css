@@ -1,0 +1,524 @@
+/* ================= RESET ================= */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================= NAVBAR / HERO ================= */
+
+
+/* ================= HERO (HOME) ================= */
+
+.hero-secundario {
+    position: relative;
+    min-height: 80vh;
+    padding: 120px 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* PATTERN (FUNDO) */
+.hero-secundario::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    background-size: 280px;
+    background-repeat: repeat;
+    opacity: 0.1;
+    background-size: 250px;
+    z-index: 1;
+}
+
+/* OVERLAY ESCURO (PROFUNIDADE) */
+.hero-secundario::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to bottom,
+            rgba(10, 10, 10, 0.7),
+            rgba(10, 10, 10, 0.95));
+
+    z-index: 2;
+}
+
+/* CONTEÚDO */
+.hero-texto {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+}
+
+/* TÍTULO */
+.hero-texto h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-texto h1 span {
+    color: #ff5a00;
+}
+
+/* SUBTEXTO */
+.hero-texto p {
+    color: #aaa;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* BOTÃO */
+.btn-destaque {
+    background-color: #ff5a00;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+
+    box-shadow: 0 0 15px rgba(255, 90, 0, 0.3);
+}
+
+.btn-destaque:hover {
+    background-color: #ff7a33;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 90, 0, 0.6);
+}
+
+/* LINHA DECORATIVA */
+.hero-linha {
+    width: 60px;
+    height: 3px;
+    background: #ff5a00;
+    margin: 25px auto;
+    border-radius: 10px;
+}
+
+/* INFOS (PROVA SOCIAL) */
+.hero-info {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* ANIMAÇÃO */
+.hero-texto {
+    animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= NAVBAR PREMIUM ================= */
+
+.navbar {
+    width: 100%;
+    background-color: #0f0f0f;
+    border-bottom: 1px solid #1f1f1f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* container central */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    height: 60px;
+    /* trava altura da navbar */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo */
+.nav-logo {
+    height: 245px;
+    /* maior que a navbar */
+
+    position: relative;
+    top: 22px;
+    /* desce um pouco pra alinhar bonito */
+}
+
+/* menu */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    position: relative;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff5a00;
+    transition: 0.3s;
+}
+
+.nav-menu a.active {
+    color: #ff5a00;
+}
+
+.nav-menu a:hover {
+    color: white;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* botão */
+.nav-btn {
+    background-color: #ff5a00;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 90, 0, 0.4);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.nav-btn:hover {
+    background-color: #ff7a33;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 90, 0, 0.7);
+}
+
+/* ================= SEÇÕES GERAIS ================= */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #ff5a00;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+/* ================= SERVIÇOS ================= */
+.servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 40px;
+}
+
+/* CARD */
+.card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #ff5a00;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 90, 0, 0.3),
+        0 0 15px rgba(255, 90, 0, 0.4);
+}
+
+/* TÍTULOS */
+.card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #ff5a00;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* LISTA */
+.card ul {
+    padding-left: 18px;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* PREÇOS */
+.precos {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #ff5a00;
+    font-weight: 600;
+}
+
+/* BOTÃO */
+.btn-card {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: #ff5a00;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #ff7a33;
+    transform: scale(1.03);
+}
+
+/*CARROSSEL DE FOTOS*/
+.card-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    /* pode ajustar */
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+.card-img img.active {
+    display: block;
+}
+
+/* setinhas */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #ff5a00;
+}
+
+/* posições */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* ================= POR QUE ESCOLHER ================= */
+.porque {
+    background-color: #111;
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #1f1f1f;
+}
+
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-beneficios li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #ccc;
+    position: relative;
+    padding-left: 25px;
+}
+
+.lista-beneficios li::before {
+    content: "✔";
+    color: #ff5a00;
+    position: absolute;
+    left: 0;
+}
+
+/* ================= RESULTADOS ================= */
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.resultados-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.resultados-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 90, 0, 0.2);
+}
+
+/* ================= CTA FINAL ================= */
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #111, #0a0a0a);
+    border-radius: 12px;
+    padding: 50px 20px;
+    border: 1px solid #1f1f1f;
+}
+
+.cta h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #ff5a00;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #ff7a33;
+    transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #0a0a0a;
+    color: #aaa;
+    margin-top: 60px;
+    border-top: 2px solid #ff5a00;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 50px 40px;
+}
+
+.footer h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #ff5a00;
+}
+
+.footer h4 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 6px 0;
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    padding: 15px;
+    font-size: 0.75rem;
+    color: #777;
+}
