@@ -393,10 +393,18 @@ section {
 }
 
 /*CARROSSEL DE FOTOS*/
-.card-img {
-    position: relative;
+.card-img img{
     width: 100%;
-    overflow: hidden;
+    display: none;
+
+    border-radius: 18px;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.card-img img.active{
+    display: block;
 }
 
 .card-img img {
@@ -668,6 +676,14 @@ section {
     font-size: 20px;
 
     border-radius: 14px;
+}
+@media (max-width: 768px){
+
+    .prev,
+    .next{
+        display: none;
+    }
+
 }
 
 

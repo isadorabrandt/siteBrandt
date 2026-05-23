@@ -42,3 +42,44 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+const sliders = document.querySelectorAll(".card-img");
+
+sliders.forEach(slider => {
+
+    const images = slider.querySelectorAll("img");
+
+    let current = 0;
+
+    let startX = 0;
+    let endX = 0;
+
+    slider.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    slider.addEventListener("touchend", (e) => {
+
+        endX = e.changedTouches[0].clientX;
+
+        if(startX - endX > 50){
+
+            images[current].classList.remove("active");
+
+            current = (current + 1) % images.length;
+
+            images[current].classList.add("active");
+        }
+
+        if(endX - startX > 50){
+
+            images[current].classList.remove("active");
+
+            current = (current - 1 + images.length) % images.length;
+
+            images[current].classList.add("active");
+        }
+
+    });
+
+});
