@@ -16,6 +16,10 @@ html {
 
 /* ================= HERO (HOME) ================= */
 
+#hero {
+    margin-top: 90px;
+}
+
 .hero-secundario {
     position: relative;
     min-height: 80vh;
@@ -138,26 +142,30 @@ html {
 /* ================= NAVBAR PREMIUM ================= */
 
 .navbar {
-    width: 100%;
-    background-color: #0f0f0f;
-    border-bottom: 1px solid #1f1f1f;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #1f1f1f;
+
+    z-index: 999;
+
+    transition: 0.3s;
 }
 
 /* container central */
 .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 
-    height: 60px;
-    /* trava altura da navbar */
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 12px 30px;
 }
 
 /* logo */
@@ -521,4 +529,164 @@ section {
     padding: 15px;
     font-size: 0.75rem;
     color: #777;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+   .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 20px;
+}
+
+    .nav-logo {
+        width: 160px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
+    .nav-btn {
+        width: 100%;
+        max-width: 220px;
+        text-align: center;
+    }
+
+    /* HERO */
+
+    #hero {
+        padding: 80px 20px;
+        text-align: center;
+        padding-top: 140px;
+
+    }
+
+    .hero-texto h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-texto p {
+        font-size: 0.95rem;
+    }
+
+    .hero-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hero-info span {
+        font-size: 0.9rem;
+    }
+
+    .btn-destaque {
+        display: inline-block;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* SERVIÇOS */
+
+    .servicos {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card p,
+    .card ul {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        height: auto;
+    }
+
+    /* CARROSSEL */
+
+    .card-img {
+        height: auto;
+    }
+
+    .prev,
+    .next {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    /* RESULTADOS */
+
+    .antes-depois {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .antes-depois img {
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    /* CTA FINAL */
+
+    .cta-final {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .cta-final h2 {
+        font-size: 1.8rem;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    .footer h3,
+    .footer h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+        padding: 15px 10px;
+    }
+
 }
