@@ -15,6 +15,13 @@ document.querySelectorAll(".card-img").forEach(carrossel => {
     };
 });
 
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".nav-menu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-menu a");
 
