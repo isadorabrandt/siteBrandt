@@ -169,7 +169,7 @@ html {
 }
 
 .nav-logo{
-    width: 110px;
+    width: 150px;
 }
 
 /* AGRUPA LOGO + MENU */
@@ -576,8 +576,10 @@ section {
         padding: 10px 0;
     }
 
-    .nav-logo {
-    width: 85px;
+ .nav-logo{
+    width: 200px;
+
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.08));
 }
 
 .nav-container {
