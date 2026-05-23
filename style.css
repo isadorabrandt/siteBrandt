@@ -172,6 +172,14 @@ html {
     width: 110px;
 }
 
+/* AGRUPA LOGO + MENU */
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
 /* MENU DESKTOP */
 
 .nav-menu{
