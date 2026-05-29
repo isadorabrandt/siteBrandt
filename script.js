@@ -127,4 +127,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    //FECHAMENTO MENU MOBILE -----
+
+    const links = document.querySelectorAll(".nav-menu a");
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+        });
+    });
+
 });
